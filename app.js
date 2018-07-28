@@ -65,6 +65,6 @@ app.use("/campgrounds",campgroundRoutes); // append "/campgrounds" in the beginn
 app.use("/",indexRoutes);
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("RentACamp is running.");
 });
