@@ -1,0 +1,23 @@
+<!-- editing a comment -->
+<% include ../partials/header.ejs %>
+<div class="container">
+    <h1 style="text-align: center">Edit Comment</h1>
+        <div style="width: 30%; margin: 25px auto;">
+
+            <form action="/campgrounds/<%= campgroundId %>/comments/<%= comment._id %>?_method=PUT" method="POST"> <!--Here campgroundId is just passed without passing the whole campground.. using req.params.id-->
+
+                <div class="form-group">
+                    <input type="text" name="comment[text]" placeholder="Text" class="form-control" value="<%= comment.text %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+
+            </form>
+
+            <a href="/campgrounds">Back to campgrounds</a>
+        </div>
+
+</div>
+
+<% include ../partials/footer.ejs %>
