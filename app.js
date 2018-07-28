@@ -22,7 +22,8 @@ var commentRoutes    = require("./routes/comments"),
 
 
 // APP SETUP
-mongoose.connect("mongodb://localhost/yelp_camp"); // THIS IS THE CREATION OF THE MONGO "COLLECTION"
+mongoose.connect("mongodb://Haitham:hny0563771801@ds257551.mlab.com:57551/rentacamp"); //connecting to mLab
+//mongoose.connect("mongodb://localhost/yelp_camp"); // THIS IS THE CREATION OF THE MONGO "COLLECTION"
 app.set("view engine","ejs");   
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
