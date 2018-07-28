@@ -21,8 +21,7 @@ var commentRoutes    = require("./routes/comments"),
 // APP SETUP
 
 //mongoose.connect("mongodb://Haitham:hny0563771801@ds257551.mlab.com:57551/rentacamp"); //connecting to mLab
-mongoose.connect(process.env.DATABASEURL); // THIS IS THE CREATION OF THE MONGO "COLLECTION" // this is an enviroment variable that we declared using SET DATABASEURL=mongodb://localhost/yelp_camp
-
+mongoose.connect(process.env.DATABASEURL); // THIS IS THE CREATION OF THE MONGO "COLLECTION" // this is an enviroment variable that we declared using SET DATABASEURL=mongodb://localhost/yelp_camp and for the heroku side "heroku config:set DATABASEURL= <the url we have from mongoDB lab>" 
 app.set("view engine","ejs");   
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
