@@ -8,13 +8,13 @@ var commentSchema = new mongoose.Schema({
             ref: "User"  // the model that we are referring to
         },
         username: String,
-
+    },
          // moment js
         createdAt: {
             type: Date,
             default: Date.now
         }
-    }
+    
 });
 
 module.exports = mongoose.model("comment",commentSchema);
