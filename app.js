@@ -17,7 +17,7 @@ var express    = require("express"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index");
-    apartmentRoutes  = require("./routes/apartments");
+    //apartmentRoutes  = require("./routes/apartments");
 
 // APP SETUP
 
@@ -63,7 +63,7 @@ app.use( // app.use will make this middleware available on every route
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds",campgroundRoutes); // append "/campgrounds" in the beginning of EVERY route in that file !
 app.use("/",indexRoutes);
-app.use("/apartments",apartmentRoutes);
+//app.use("/apartments",apartmentRoutes);
 
 
 app.listen(process.env.PORT || 3000,function(){
